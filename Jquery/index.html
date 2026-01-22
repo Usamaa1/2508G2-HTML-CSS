@@ -44,6 +44,11 @@
     <button id="btn" class="btn btn-outline-primary">Hide Me</button>
     <button id="btn1" class="btn btn-outline-primary">Show Me</button>
     <button id="btn2" class="btn btn-outline-primary">Toggle Me</button>
+    <button id="btn3" class="btn btn-outline-primary">Slide Up</button>
+    <button id="btn4" class="btn btn-outline-primary">Slide Down</button>
+    <button id="btn5" class="btn btn-outline-primary">Fade Up</button>
+    <button id="btn6" class="btn btn-outline-primary">Fade Down</button>
+
 
 
     <div class="container">
@@ -94,6 +99,27 @@
             $('#btn2').click(() => {
                 $('#box').toggle(2000);
             })
+
+
+            $('#btn3').click(() => {
+                $('#box').slideUp(2000);
+            })
+
+            $('#btn4').click(() => {
+                $('#box').slideDown(2000);
+            })
+
+            $('#btn5').click(() => {
+                $('#box').fadeIn(2000);
+            })
+
+            $('#btn6').click(() => {
+                $('#box').fadeOut(2000);
+            })
+            
+            // $('#btn6').click(() => {
+            //     $('#box').fadeToggle(2000);
+            // })
 
 
             $('#eyeIcon').click(() => {
