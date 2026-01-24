@@ -21,12 +21,14 @@
                         <input type="text" class="form-control" id="firstName" />
                         <label class="form-label" for="form3Example1">First name</label>
                     </div>
+                    <p id="firstNameError"></p>
                 </div>
                 <div class="col">
                     <div data-mdb-input-init class="form-outline">
                         <input type="text"  class="form-control" id="lastName" />
                         <label class="form-label" for="form3Example2">Last name</label>
                     </div>
+                    <p id="lastNameError"></p>
                 </div>
             </div>
 
@@ -35,17 +37,20 @@
                 <input type="email"  class="form-control" id="email" />
                 <label class="form-label" for="form3Example3">Email address</label>
             </div>
+            <p id="emailError"></p>
 
             <!-- Password input -->
             <div data-mdb-input-init class="form-outline mb-4">
                 <input type="password" class="form-control" id="password" />
                 <label class="form-label" for="form3Example4">Password</label>
             </div>
+            <p id="passwordError"></p>
             <!-- Age input -->
             <div data-mdb-input-init class="form-outline mb-4">
                 <input type="text" class="form-control" id="age" />
                 <label class="form-label" for="form3Example4">Age</label>
             </div>
+            <p id="ageError"></p>
 
 
             <!-- Submit button -->
@@ -78,9 +83,81 @@
         $("#firstName").keyup(()=>{
             console.log($("#firstName").val())
 
+            if(firstNameRegex.test($("#firstName").val())){
+                firstName.removeClass("is-invalid");
+                firstName.addClass("is-valid");
+            }
+            else{
+                firstName.removeClass("is-valid");
+                firstName.addClass("is-invalid");
+                $('#firstNameError').html("First Name is not valid");
+            }
             
            
         })
+
+        lastName.keyup(()=>{
+
+            if(lastNameRegex.test(lastName.val())){
+                lastName.removeClass("is-invalid");
+                lastName.addClass("is-valid");
+            }
+            else{
+                lastName.removeClass("is-valid");
+                lastName.addClass("is-invalid");
+                $('#lastNameError').html("Last Name is not valid");
+            }
+        })
+
+        email.keyup(()=>{
+
+            if(emailRegex.test(email.val())){
+                email.removeClass("is-invalid");
+                email.addClass("is-valid");
+            }
+            else{
+                email.removeClass("is-valid");
+                email.addClass("is-invalid");
+                $('#emailError').html("Email is not valid");
+            }
+        })
+
+        password.keyup(()=>{
+
+            if(passwordRegex.test(password.val())){
+                password.removeClass("is-invalid");
+                password.addClass("is-valid");
+            }
+            else{
+                password.removeClass("is-valid");
+                password.addClass("is-invalid");
+                $('#passwordError').html("Password is not valid");
+            }
+        })
+
+        age.keyup(()=>{
+
+            if(ageRegex.test(age.val())){
+                age.removeClass("is-invalid");
+                age.addClass("is-valid");
+            }
+            else{
+                age.removeClass("is-valid");
+                age.addClass("is-invalid");
+                $('#ageError').html("Age is not valid");
+            }
+        })
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
