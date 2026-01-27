@@ -118,7 +118,7 @@
             else{
                 email.removeClass("is-valid");
                 email.addClass("is-invalid");
-                $('#emailError').html("Email is not valid");
+                $('#emailError').html("Please enter a valid email address (e.g., user@example.com).");
             }
         })
 
@@ -131,7 +131,7 @@
             else{
                 password.removeClass("is-valid");
                 password.addClass("is-invalid");
-                $('#passwordError').html("Password is not valid");
+                $('#passwordError').html("Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character (e.g., @, #, $).");
             }
         })
 
